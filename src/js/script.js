@@ -190,7 +190,6 @@ function ocultarModal() {
 /* ********************************** */
 /* ************* SLIDER ************* */
 /* ********************************** */
-
 let swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",

@@ -112,8 +112,8 @@ button.borrar-producto {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center; 
+  align-items: center;
   z-index: 2;
 }
 
