@@ -20,8 +20,9 @@ function mostrarArticulosCarrito() {
 
   // Recorre los elementos en el carrito y agrégalos a la lista temporal sumando cantidades
   itemsCarrito.forEach((item) => {
-    const titulo = item.querySelector("span.titulo")
-    .previousSibling.textContent.trim();
+    const titulo = item
+      .querySelector("span.titulo")
+      .previousSibling.textContent.trim();
     const precio = item.querySelector(".precio").textContent;
     const cantidad = parseInt(item.querySelector(".cantidad").textContent);
     if (titulo in listaTemporal) {
@@ -112,10 +113,12 @@ document
       actualizarContadorCarrito();
     }
   });
-  document.getElementById("lista-carrito").addEventListener("click", function (event) {
+document
+  .getElementById("lista-carrito")
+  .addEventListener("click", function (event) {
     const listItem = event.target.closest("li");
     if (!listItem) return;
-  
+
     const cantidadElemento = listItem.querySelector(".cantidad");
     if (event.target.classList.contains("aumentar")) {
       cantidadElemento.textContent = parseInt(cantidadElemento.textContent) + 1;
@@ -125,12 +128,19 @@ document
         cantidadElemento.textContent = cantidadActual - 1;
       }
     }
-  
+
     calcularTotal();
     actualizarContadorCarrito();
   });
+
+function limpiarCarrito() {
+  const listaCarrito = document.getElementById("lista-carrito");
+  listaCarrito.innerHTML = "";
+  calcularTotal();
+  actualizarContadorCarrito();
+}
 /* ********************************** */
-/* ************* MODAL ************* */
+/* *************  MODAL ************* */
 /* ********************************** */
 document
   .getElementById("lista-carrito")
@@ -170,6 +180,7 @@ document.getElementById("confirmar").addEventListener("click", finalizarCompra);
 function finalizarCompra() {
   alert("¡Compra finalizada! \n!Gracias por su compra!");
   ocultarModal();
+  limpiarCarrito();
 }
 
 function ocultarModal() {
@@ -180,24 +191,24 @@ function ocultarModal() {
 /* ************* SLIDER ************* */
 /* ********************************** */
 
-let swiper = new Swiper('.swiper', {
+let swiper = new Swiper(".swiper", {
   // Optional parameters
-  direction: 'horizontal',
+  direction: "horizontal",
   loop: true,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: ".swiper-scrollbar",
   },
 });
