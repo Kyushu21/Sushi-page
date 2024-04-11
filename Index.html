@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinobi</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="contenedor-header">
+      <div class="contenedor header">
+        <div class="contenedor-logo">
+          <i class="fa-solid fa-user-ninja"></i>
+          <h1>Shinobi</h1>
+        </div>
+        <div class="contenedor-user">
+          <div id="carrito" class="carrito oculto">
+            <button id="cerrar-carrito">^</button>
+            <ul id="lista-carrito"></ul>
+            <p>Total: <span id="total"></span></p>
+            <button id="finalizar-compra">Finalizar compra</button>
+          </div>
+          <div id="confirmar-modal" class="modal oculto">
+            <div class="modal-contenido">
+              <p>¿Estás seguro de que deseas finalizar tu compra?</p>
+              <button id="confirmar">Confirmar</button>
+              <button id="cancelar">Cancelar</button>
+            </div>
+          </div>
+          <div id="icono-carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="contador-carrito">0</span>
+          </div>
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="contenedor-navbar">
+        <nav class="navbar contenedor">
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#titulomenu">Especiales</a></li>
+            <li><a href="#heading-2">Top rollos</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://cloudfront-us-east-1.images.arcpublishing.com/dmn/2UCKEPZK4RC3PH7YWWCBUPSVTA.jpg" alt="" class="imgslide"></div>
+      <div class="swiper-slide"><img src="https://img.jakpost.net/c/2020/04/08/2020_04_08_92239_1586333880._large.jpg" alt="" class="imgslide"></div>
+      <div class="swiper-slide"><img src="https://www.arabnews.jp/en/wp-content/uploads/sites/2/2020/04/1586321914899508300-1024x683.jpg" class="imgslide" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+  <div class="restaurant-description">
+    <h2 class="titulo2">Bienvenido a <span>Shinobi</span></h2>
+    <div class="container">
+      <p class="informaciontxt">Sumérgete en un mundo de sabores exquisitos y tradición japonesa mientras te embarcas en
+        un viaje gastronómico único en su tipo. En Shinobi,
+        nos enorgullece presentar una fusión magistral de autenticidad y creatividad en cada bocado. Nuestros maestros
+        del sushi, hábiles y expertos,
+        preparan cada pieza con precisión ninja, utilizando solo los ingredientes más frescos y de la más alta calidad.
+        Sumérgete en un ambiente envolvente y elegante,
+        donde la serenidad se combina con la emoción de la cocina en vivo. Nuestra barra de sushi te invita a presenciar
+        la magia culinaria mientras nuestros chefs crean
+        obras maestras delante de tus ojos. Descubre nuestra amplia variedad de rollos artesanales, desde los clásicos
+        hasta las creaciones innovadoras que desafían los
+        límites de la imaginación. Cada plato en Shinobi es una expresión de nuestro compromiso con la excelencia y la
+        pasión por el sushi. Además de nuestra extraordinaria
+        selección de sushi, también ofrecemos una cuidadosa selección de bebidas, incluyendo sake premium y cócteles
+        japoneses artesanales, diseñados para complementar perfectamente
+        tu experiencia gastronómica. En Shinobi, no solo te invitamos a disfrutar de una comida excepcional, sino que te
+        invitamos a formar parte de una experiencia gastronómica que
+        te transportará a las calles de Tokio con cada bocado. Ven y únete a nosotros en Shinobi, donde la elegancia, la
+        autenticidad y la pasión se encuentran para crear una experiencia
+        culinaria verdaderamente inolvidable.
+        ¡Te esperamos para una aventura gastronómica como ninguna otra en Shinobi, el santuario del sushi!</p>
+    </div>
+  </div>
+  <section class="container top-rollos">
+    <h2 id="heading-2">Mejores rollos de Shinobi</h2>
+    <div class="container-productos">
+      <div class="card-category category-vegan">
+        <p>Vegan Roll</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-temaki">
+        <p>Temaki</p>
+        <span>Ver más</span>
+      </div>
+      <div class="card-category category-nigiri">
+        <p>Nigiri</p>
+        <span>Ver más</span>
+      </div>
+    </div>
+  </section>
+  <h2 id="titulomenu">Platillos especiales del chef</h2>
+  <div class="container">
+    <div class="item">
+      <img src="img/Yakimeshi.png" alt="Yakimeshi">
+      <h3>Yakimeshi Mixto</h3>
+      <p>Arroz frito con una variedad de ingredientes mixtos, como carne.</p>
+      <span class="precio">$12.99</span>
+      <button class="button-agregar">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="img/Maki.png" alt="Plato 2">
+      <h3>Maki</h3>
+      <p>Rollos de sushi con arroz y relleno envueltos en alga nori.</p>
+      <span class="precio">$8.50</span>
+      <button class="button-agregar">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="img/UramakiSpicy.png" alt="Plato 3">
+      <h3>Uramaki Spicy</h3>
+      <p>Rollos de sushi invertidos con arroz por fuera y relleno picante.</p>
+      <span class="precio">$9.99</span>
+      <button class="button-agregar">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="img/Temaki1.png" alt="Plato 4">
+      <h3>Temaki</h3>
+      <p> Conos de alga nori rellenos de arroz y diversos ingredientes.</p>
+      <span class="precio">$7.25</span>
+      <button class="button-agregar">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="img/InariDragon.png" alt="Plato 5">
+      <h3>Inari Dragon</h3>
+      <p>Rollos con langostino tempura y aguacate envueltos en tofu frito.</p>
+      <span class="precio">$10.75</span>
+      <button class="button-agregar">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="img/Oshi.png" alt="Plato 6">
+      <h3>Oshi</h3>
+      <p>Sushi prensado en una caja con arroz y diferentes ingredientes encima.</p>
+      <span class="precio">$11.50</span>
+      <button class="button-agregar">Agregar al carrito</button>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="contenedor-footer">
+      <div class="menu-footer">
+        <div class="contacto-informacion">
+          <p class="titulo-footer">Informacion de contacto</p>
+          <ul>
+            <li>Dirección: Hermosillo</li>
+            <li>Teléfono: 6625815418</li>
+            <li>EmaiL: shinobi@support.com</li>
+          </ul>
+          <div class="social-iconos">
+            <span class="facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+            <span class="twitter">
+              <i class="fa-brands fa-twitter"></i>
+            </span>
+            <span class="youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </span>
+            <span class="pinterest">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </span>
+            <span class="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+          </div>
+        </div>
+        <div class="informacion">
+          <p class="titulo-footer">Informacion</p>
+          <ul>
+            <li><a href="#">Acerca de Nosotros</a></li>
+            <li><a href="#">Información Delivery</a></li>
+            <li><a href="#">Politicas de Privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="copyright">
+        <p>Kyushu &copy; 2024</p>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
